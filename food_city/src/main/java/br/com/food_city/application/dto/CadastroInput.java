@@ -25,13 +25,10 @@ public class CadastroInput {
     @NotBlank
     private EnderecoInput enderecoInput;
 
-    @NotBlank
-    private String role;
 
-    public CadastroInput(String nome, String email, String numeroDocumento, String dataNascimento,String role, EnderecoInput enderecoInput) {
+    public CadastroInput(String nome, String email, String numeroDocumento, String dataNascimento, EnderecoInput enderecoInput) {
         this.nome = nome;
         this.email = email;
-        this.role = role;
         this.numeroDocumento = numeroDocumento;
         this.dataNascimento = dataNascimento;
         this.enderecoInput = enderecoInput;

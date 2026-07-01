@@ -14,6 +14,10 @@ public class Usuario {
 
     private TipoUsuario tipoUsuario;
 
+    public Usuario(){
+
+    }
+
     public Usuario(UUID identificador, String login, TipoUsuario tipoUsuario) {
         this.identificador = identificador;
         this.login = login;

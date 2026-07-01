@@ -23,6 +23,10 @@ public class Cadastro {
 
     private EnderecoDomain endereco;
 
+    public Cadastro(){
+
+    }
+
     public Cadastro(UUID identificador, String nome, String email, String numeroDocumento, String dataNascimento, EnderecoDomain endereco) {
         this.identificador = identificador;
         this.nome = nome;
@@ -66,6 +70,10 @@ public class Cadastro {
 
     public String getDataNascimento() {
         return dataNascimento;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public Boolean isDono(){
