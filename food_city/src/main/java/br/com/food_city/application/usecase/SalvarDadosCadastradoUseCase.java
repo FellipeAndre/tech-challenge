@@ -22,17 +22,17 @@ public class SalvarDadosCadastradoUseCase {
 
 
     @Transactional
-    public Cadastro created(CadastroInput input) {
+    public Cadastro created(CadastroInput input, String properties) {
 
         var cadastro = mapper.toDomain(input);
 
         var cadastroSalvo = this.cadastroRepository.salvar(cadastro);
         var tipoUsuario = cadastroSalvo.getUsuario().getTipoUsuario();
 
-        if (cadastroSalvo.isDono) {
+        if (properties.equals("DONO")) {
             tipoUsuario.setRole(TipoRoleEnum.DONO.name());
         }
-        if (!cadastroSalvo.isDono) {
+        if (properties.equals("CLIENTE")) {
             tipoUsuario.setRole(TipoRoleEnum.CLIENTE.name());
         }
         cadastroSalvo.getUsuario().getTipoUsuario().setRole(tipoUsuario.getRole());

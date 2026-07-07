@@ -8,4 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface TipoUsuarioJPA extends JpaRepository<TipoUsuarioEntity, UUID> {
+
+    TipoUsuarioEntity findByIdUsuario(UUID identificadorUsuario);
 }

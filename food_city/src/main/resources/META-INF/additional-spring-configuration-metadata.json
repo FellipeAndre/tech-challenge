@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring.user.cadastro.client",
+      "type": "java.lang.String",
+      "description": "Description for spring.user.cadastro.client."
+    },
+    {
+      "name": "spring.user.cadastro.proprietary",
+      "type": "java.lang.String",
+      "description": "Description for spring.user.cadastro.proprietary."
+    }
+  ] }

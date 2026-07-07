@@ -8,7 +8,6 @@ import java.util.UUID;
 
 public class Cadastro {
 
-    public boolean isDono;
     private UUID identificador;
 
     private String nome;

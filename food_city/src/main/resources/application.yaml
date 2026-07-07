@@ -18,6 +18,10 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+  user:
+    cadastro:
+      client: "CLIENTE"
+      proprietary: "DONO"
 
 kind: Application
 
