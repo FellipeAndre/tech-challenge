@@ -20,24 +20,30 @@ public class Cadastro {
 
     private Usuario usuario;
 
+    private TipoUsuario tipoUsuario;
+
     private EnderecoDomain endereco;
 
     public Cadastro(){
 
     }
 
-    public Cadastro(UUID identificador, String nome, String email, String numeroDocumento, String dataNascimento, EnderecoDomain endereco) {
+    public Cadastro(UUID identificador, String nome, String email, String numeroDocumento, String dataNascimento,TipoUsuario tipoUsuario, Usuario usuario, EnderecoDomain endereco) {
         this.identificador = identificador;
         this.nome = nome;
         this.email = email;
+        this.tipoUsuario = tipoUsuario;
         this.numeroDocumento = validarNumeroDocumento(numeroDocumento);
         this.dataNascimento = formatarDataNascimento(dataNascimento).toString();
+        this.usuario = usuario;
         this.endereco = endereco;
     }
 
-    public Cadastro(String nome, String email, String numeroDocumento, String dataNascimento, EnderecoDomain endereco) {
+    public Cadastro(String nome, String email, String numeroDocumento, String dataNascimento, EnderecoDomain endereco, TipoUsuario tipoUsuario, Usuario usuario) {
         this.nome = nome;
         this.email = email;
+        this.tipoUsuario = tipoUsuario;
+        this.usuario = usuario;
         this.numeroDocumento = validarNumeroDocumento(numeroDocumento);
         this.dataNascimento = formatarDataNascimento(dataNascimento).toString();
         this.endereco = endereco;
@@ -67,12 +73,28 @@ public class Cadastro {
         return numeroDocumento;
     }
 
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
     public String getDataNascimento() {
         return dataNascimento;
     }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setEndereco(EnderecoDomain endereco) {
+        this.endereco = endereco;
     }
 
     public Boolean isDono(){
@@ -82,6 +104,11 @@ public class Cadastro {
     public Usuario getUsuario() {
         return usuario;
     }
+
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
     public EnderecoDomain getEndereco() {
         return endereco;
     }

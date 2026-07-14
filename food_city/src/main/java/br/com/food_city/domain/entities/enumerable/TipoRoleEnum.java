@@ -6,6 +6,15 @@ public enum TipoRoleEnum {
     CLIENTE,
     FUNCIONARIO;
 
-    TipoRoleEnum() {
+
+    public static TipoRoleEnum from(String role) {
+
+        for (TipoRoleEnum tipo : values()) {
+            if (tipo.name().equalsIgnoreCase(role)) {
+                return tipo;
+            }
+        }
+
+        throw new IllegalArgumentException("Tipo de usuário inválido: " + role);
     }
 }

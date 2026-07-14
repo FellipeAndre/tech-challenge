@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95301b77-d0e9-428a-8249-3eb57f718bd4" name="Changes" comment="feat: Mapeament dos repositorys e criacao do objetos do restaurante">
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/EnderecoOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/TipoUsuarioInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/TipoUsuarioOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/UsuarioInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/mapper/TipoUsuarioUseCaseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/cadastro/AtualizarCadastroUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/cadastro/BuscarCadastroUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/cadastro/ListarCadastroUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/cadastro/RemoverCadastroUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/cadastro/SalvarCadastroUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/restaurante/AtualizarRestauranteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/restaurante/BuscarRestauranteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/restaurante/CadastrarRestauranteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/restaurante/ListarRestauranteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/restaurante/RemoverRestauranteUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/tipoUsuario/AssociarTipoUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/tipoUsuario/AtualizarTipoUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/tipoUsuario/BuscarTipoUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/tipoUsuario/CadastrarTipoUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/tipoUsuario/ListarTipoUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/tipoUsuario/RemoverTipoUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/usuario/AtualizarUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/usuario/BuscarUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/usuario/ListarUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/usuario/RemoverUsuarioUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/exception/GlobalNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/exception/UsuarioNaoEncontradoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/entity/RestauranteEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/RestauranteGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/mapper/CadastroInfraMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/mapper/RestauranteInfraMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/mapper/TipoUsuarioInfraMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/mapper/UsuarioInfraMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/repository/RestauranteRepositoryJPA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/controller/RestauranteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/dto/AssociarTipoUsuarioRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/dto/TipoUsuarioRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/CadastroInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/CadastroInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/CadastroOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/CadastroOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/EnderecoInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/EnderecoInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/RestauranteInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/RestauranteInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/RestauranteOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/RestauranteOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/mapper/CadastroUsecaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/mapper/CadastroUsecaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/mapper/RestauranteUsecaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/mapper/RestauranteUsecaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/SalvarDadosCadastradoUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/config/CadastroProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/config/CadastroProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/Cadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/Cadastro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/EnderecoDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/EnderecoDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/TipoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/TipoUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/enumerable/TipoRoleEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/entities/enumerable/TipoRoleEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/CadastroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/CadastroRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/RestauranteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/RestauranteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/TipoUsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/TipoUsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/domain/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/entity/CadastroEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/entity/CadastroEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/entity/TipoUsuarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/entity/TipoUsuarioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/CadastrarGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/CadastrarGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/TipoUsuarioGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/TipoUsuarioGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/UsuarioGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/UsuarioGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/repository/TipoUsuarioJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/repository/TipoUsuarioRepositoryJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/controller/CadastroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/dto/CadastroRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/dto/CadastroRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/food_city/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/test/java/br/com/food_city/infrastructure/gateway/UsuarioGatewayTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/test/java/br/com/food_city/mock/MockitoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_city/src/test/java/br/com/food_city/usecase/SalvarDadosCadastradoUseCaseTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="67" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="C:\Users\User\workspace\apache-maven-3.9.16" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="6.309314738545851E-35" />
+      <entry key="MS500" value="1.4454279173156455E-7" />
+      <entry key="S2" value="0.019498459611413037" />
+      <entry key="S5" value="0.2082488566460825" />
+      <entry key="S10" value="0.49013917009255653" />
+      <entry key="S30" value="1.1505784680533833" />
+      <entry key="S60" value="2.0252234768463713" />
+      <entry key="M2" value="4.130046234387566" />
+      <entry key="M5" value="20.09228157205931" />
+      <entry key="M10" value="112.72082433523937" />
+      <entry key="M15" value="231.63371979947382" />
+      <entry key="M30" value="508.3580942663948" />
+      <entry key="H1" value="782.9560927301102" />
+      <entry key="H2" value="994.0092096439549" />
+      <entry key="H4" value="1137.388976022912" />
+      <entry key="D1" value="1434.6019158314425" />
+      <entry key="W1" value="1722.84723822549" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0011217765766567" />
+      <entry key="MS500" value="1.2724255044862844" />
+      <entry key="S2" value="2.2143602418943895" />
+      <entry key="S5" value="3.238193337797217" />
+      <entry key="S10" value="3.981478463828969" />
+      <entry key="S30" value="5.000100925842351" />
+      <entry key="S60" value="5.787428605017594" />
+      <entry key="M2" value="7.718059955543336" />
+      <entry key="M5" value="14.727106975905475" />
+      <entry key="M10" value="22.084269563365016" />
+      <entry key="M15" value="26.250468519495694" />
+      <entry key="M30" value="35.970927959098525" />
+      <entry key="H1" value="58.29723977956962" />
+      <entry key="H2" value="95.51829627033851" />
+      <entry key="H4" value="140.5993512597315" />
+      <entry key="D1" value="370.2064232733257" />
+      <entry key="W1" value="658.4517708670637" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.026467525500741603" />
+      <entry key="MS500" value="0.5764921671427555" />
+      <entry key="S2" value="1.6405326744283768" />
+      <entry key="S5" value="2.9418210058882828" />
+      <entry key="S10" value="4.107098191125762" />
+      <entry key="S30" value="5.978055471276853" />
+      <entry key="S60" value="7.706365222914788" />
+      <entry key="M2" value="11.768761933932293" />
+      <entry key="M5" value="34.75122201153468" />
+      <entry key="M10" value="134.75166075878175" />
+      <entry key="M15" value="257.8402758953913" />
+      <entry key="M30" value="544.2941115090669" />
+      <entry key="H1" value="841.2190159014136" />
+      <entry key="H2" value="1089.4963870180275" />
+      <entry key="H4" value="1277.9645485009337" />
+      <entry key="D1" value="1804.7976381279873" />
+      <entry key="W1" value="2381.2962411129815" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3G30OtB7H4szLDZTK1pIVk7OHBc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in food_city.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AtualizarRestauranteUseCaseTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CadastrarRestauranteUseCaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SalvarCadastroUseCaseTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SalvarDadosCadastradoUseCaseTest (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SalvarDadosCadastradoUseCaseTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.br.com.food_city.application.usecase.restaurante in food_city.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.br.com.food_city.usecase.cadastro in food_city.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven.food_city [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.food_city [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.food_city [install].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.FoodCityApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/workspace/tech-challenge/food_city/src/main/java/br/com/food_city/application/usecase/usuario&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.food_city.application.dto" />
+      <recent name="br.com.food_city.presentation.dto" />
+      <recent name="br.com.food_city.application.usecase.tipoUsuario" />
+      <recent name="br.com.food_city.application.usecase" />
+      <recent name="br.com.food_city.exception" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\workspace\tech-challenge\food_city\src\main\java\br\com\food_city\application\usecase\usuario" />
+      <recent name="C:\Users\User\workspace\tech-challenge\food_city\src\main\java\br\com\food_city\application\usecase\cadastro" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\workspace\tech-challenge\food_city\src" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.food_city.application.usecase.restaurante" />
+      <recent name="br.com.food_city.application.usecase.cadastro" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.food_city.exception" />
+      <recent name="br.com.food_city.application.dto" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.FoodCityApplication">
+    <configuration name="AtualizarRestauranteUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food_city" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.food_city.application.usecase.restaurante.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.food_city.application.usecase.restaurante" />
+      <option name="MAIN_CLASS_NAME" value="br.com.food_city.application.usecase.restaurante.AtualizarRestauranteUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadastrarRestauranteUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food_city" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.food_city.application.usecase.restaurante.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.food_city.application.usecase.restaurante" />
+      <option name="MAIN_CLASS_NAME" value="br.com.food_city.application.usecase.restaurante.CadastrarRestauranteUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SalvarCadastroUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food_city" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.food_city.application.usecase.cadastro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.food_city.application.usecase.cadastro" />
+      <option name="MAIN_CLASS_NAME" value="br.com.food_city.application.usecase.cadastro.SalvarCadastroUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SalvarDadosCadastradoUseCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food_city" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.food_city.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.food_city.usecase" />
+      <option name="MAIN_CLASS_NAME" value="br.com.food_city.usecase.SalvarDadosCadastradoUseCaseTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.com.food_city.application.usecase.restaurante in food_city" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="food_city" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.food_city.application.usecase.restaurante.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.food_city.application.usecase.restaurante" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoodCityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="food_city" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.food_city.FoodCityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SalvarCadastroUseCaseTest" />
+        <item itemvalue="JUnit.SalvarDadosCadastradoUseCaseTest" />
+        <item itemvalue="JUnit.CadastrarRestauranteUseCaseTest" />
+        <item itemvalue="JUnit.br.com.food_city.application.usecase.restaurante in food_city" />
+        <item itemvalue="JUnit.AtualizarRestauranteUseCaseTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95301b77-d0e9-428a-8249-3eb57f718bd4" name="Changes" comment="" />
+      <created>1783184918361</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783184918361</updated>
+      <workItem from="1783184919809" duration="6830000" />
+      <workItem from="1783384664357" duration="63281000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: Mapeament dos repositorys e criacao do objetos do restaurante">
+      <option name="closed" value="true" />
+      <created>1783386219346</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783386219346</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Mapeament dos repositorys e criacao do objetos do restaurante" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Mapeament dos repositorys e criacao do objetos do restaurante" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/dto/UsuarioInput.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/controller/CadastroController.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/CadastrarGateway.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/CadastrarGateway.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/TipoUsuarioGateway.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/infrastructure/gateway/TipoUsuarioGateway.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/controller/CadastroController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/presentation/dto/EnderecoRequest.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/food_city/src/main/java/br/com/food_city/application/usecase/restaurante/CadastrarRestauranteUseCase.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tech_challenge$CadastrarRestauranteUseCaseTest.ic" NAME="CadastrarRestauranteUseCaseTest Coverage Results" MODIFIED="1783877571660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.food_city.application.usecase.restaurante.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tech_challenge$AtualizarRestauranteUseCaseTest.ic" NAME="AtualizarRestauranteUseCaseTest Coverage Results" MODIFIED="1783982569105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.food_city.application.usecase.restaurante.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tech_challenge$SalvarDadosCadastradoUseCaseTest.ic" NAME="SalvarDadosCadastradoUseCaseTest Coverage Results" MODIFIED="1784036345826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.food_city.usecase.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tech_challenge$br_com_food_city_usecase_cadastro_in_food_city.ic" NAME="br.com.food_city.usecase.cadastro in food_city Coverage Results" MODIFIED="1783796408207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.food_city.usecase.cadastro.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tech_challenge$All_in_food_city.ic" NAME="All in food_city Coverage Results" MODIFIED="1783796426004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/tech_challenge$br_com_food_city_application_usecase_restaurante_in_food_city.ic" NAME="br.com.food_city.application.usecase.restaurante in food_city Coverage Results" MODIFIED="1783983038717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.food_city.application.usecase.restaurante.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/tech_challenge$SalvarCadastroUseCaseTest.ic" NAME="SalvarCadastroUseCaseTest Coverage Results" MODIFIED="1784037875755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>br.com.food_city.application.usecase.cadastro.*</FILTER>
+    </SUITE>
+  </component>
+</project>

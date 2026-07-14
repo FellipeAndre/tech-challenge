@@ -1,0 +1,35 @@
+package br.com.food_city.application.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class EnderecoOutput {
+
+    @NotBlank
+    private String logradouro;
+
+    @NotBlank
+    private String numero;
+
+    @NotBlank
+    private String bairro;
+
+    @NotBlank
+    private String municipio;
+
+    @NotBlank
+    private String estado;
+
+    public EnderecoOutput(String logradouro, String numero, String bairro, String municipio, String estado) {
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.municipio = municipio;
+        this.estado = estado;
+    }
+}

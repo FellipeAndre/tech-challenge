@@ -22,10 +22,6 @@ public class EnderecoDomain {
         this.municipio = municipio;
     }
 
-    public static EnderecoDomain created(EnderecoInput input){
-        return null;
-    }
-
     public String getLorgadouro() {
         return lorgadouro;
     }

@@ -1,6 +1,7 @@
 package br.com.food_city.application.dto;
 
 import java.time.LocalTime;
+import java.util.UUID;
 
 public class RestauranteInput{
 
@@ -9,7 +10,19 @@ public class RestauranteInput{
     private String tipoCozinha;
     private LocalTime horarioAbertura;
     private LocalTime horarioFechamento;
-    private Long donoId;
+    private UUID donoId;
+
+    public RestauranteInput() {
+    }
+
+    public RestauranteInput(String nome, EnderecoInput endereco, String tipoCozinha, LocalTime horarioAbertura, LocalTime horarioFechamento, UUID donoId) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.tipoCozinha = tipoCozinha;
+        this.horarioAbertura = horarioAbertura;
+        this.horarioFechamento = horarioFechamento;
+        this.donoId = donoId;
+    }
 
     public String getNome() {
         return nome;
@@ -51,11 +64,11 @@ public class RestauranteInput{
         this.horarioFechamento = horarioFechamento;
     }
 
-    public Long getDonoId() {
+    public UUID getDonoId() {
         return donoId;
     }
 
-    public void setDonoId(Long donoId) {
+    public void setDonoId(UUID donoId) {
         this.donoId = donoId;
     }
 }

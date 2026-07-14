@@ -11,6 +11,8 @@ import org.springframework.stereotype.Component;
 @Setter
 public class CadastroProperties {
 
-    private String client;
-    private String proprietary;
+    private String cliente;
+    private String proprietario;
+    private String funcionario;
+
 }

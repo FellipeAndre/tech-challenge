@@ -1,69 +1,71 @@
 package br.com.food_city.infrastructure.gateway;
 
 import br.com.food_city.domain.entities.Cadastro;
-import br.com.food_city.domain.entities.TipoUsuario;
 import br.com.food_city.domain.entities.Usuario;
 import br.com.food_city.domain.repository.UsuarioRepository;
+import br.com.food_city.exception.GlobalNotFoundException;
+import br.com.food_city.exception.UsuarioNaoEncontradoException;
 import br.com.food_city.infrastructure.entity.TipoUsuarioEntity;
 import br.com.food_city.infrastructure.entity.UsuarioEntity;
-import br.com.food_city.infrastructure.repository.TipoUsuarioJPA;
+import br.com.food_city.infrastructure.mapper.UsuarioInfraMapper;
+import br.com.food_city.infrastructure.repository.CadastrarRepositoryJPA;
+import br.com.food_city.infrastructure.repository.TipoUsuarioRepositoryJpa;
 import br.com.food_city.infrastructure.repository.UsuarioRepositoryJpa;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
+
+import static br.com.food_city.infrastructure.mapper.UsuarioInfraMapper.toDomain;
 
 @Component
 @RequiredArgsConstructor
 public class UsuarioGateway implements UsuarioRepository {
 
-    private final UsuarioRepositoryJpa jpa ;
+    private final UsuarioRepositoryJpa usuarioRepositoryJpa;
 
-    private final TipoUsuarioJPA tipoUsuarioJPA;
 
     @Override
-    @Transactional
-    public Usuario salvarUsuario(Cadastro cadastro) {
-
-        var usuarioSalvo = this.jpa.save(toEntity(cadastro));
-
-        var tipoUsuarioEntity = TipoUsuarioEntity.builder()
-                .usuario(usuarioSalvo)
-                .role(cadastro.getUsuario().getTipoUsuario().getRole())
-                .build();
-
-        var tipoUsuariosalvo = this.tipoUsuarioJPA.save(tipoUsuarioEntity);
-
-        return toDomain(usuarioSalvo, tipoUsuariosalvo);
+    public Usuario salvarUsuario(Cadastro cadastro) throws GlobalNotFoundException {
+        var usuarioEntity = UsuarioInfraMapper.toEntity(cadastro.getUsuario());
+        return toDomain(this.usuarioRepositoryJpa.save(usuarioEntity));
     }
 
-    private TipoUsuario tipoUsuarioDomain(TipoUsuarioEntity tipoUsuarioEntity){
-        return null;
+    public Usuario buscarUsuarioPorId(UUID identificadorUsuario) throws UsuarioNaoEncontradoException {
+        UsuarioEntity usuarioEntity = usuarioRepositoryJpa.findById(identificadorUsuario)
+                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuario nao encontrado!!!"));
+
+        return toDomain(usuarioEntity);
     }
 
-    private Usuario toDomain(UsuarioEntity usuarioEntity, TipoUsuarioEntity tipoUsuarioEntity) {
-
-        var tipoUsuarioDomain = new TipoUsuario();
-        tipoUsuarioDomain.setRole(tipoUsuarioEntity.getRole());
-
-        return new Usuario(usuarioEntity.getLogin(), usuarioEntity.getHashSenha(), tipoUsuarioDomain);
+    @Override
+    public Optional<Usuario> buscarPorId(UUID id) {
+        var retorno = this.usuarioRepositoryJpa.findById(id);
+        return Optional.of(toDomain(retorno.get()));
     }
 
-    private UsuarioEntity toEntity(Cadastro cadastro) {
-
-        return UsuarioEntity.builder()
-                .login(cadastro.getUsuario().getLogin())
-                .hashSenha(cadastro.getUsuario().getSenha())
-                .build();
+    @Override
+    public List<Usuario> listarTodos() {
+        return List.of();
     }
 
-    public Usuario buscarUsuarioPorId(UUID identificadorUsuario) {
-        UsuarioEntity usuarioEntity = jpa.findById(identificadorUsuario)
-                .orElseThrow(() -> new ClassCastException());
-
-       TipoUsuarioEntity tipoUsuario = tipoUsuarioJPA.findByIdUsuario(identificadorUsuario);
-
-        return toDomain(usuarioEntity, tipoUsuario);
+    @Override
+    public List<Usuario> listarPorDono(UUID donoId) {
+        return List.of();
     }
+
+    @Override
+    public void remover(UUID id) {
+
+    }
+
+    @Override
+    public void salvar(Usuario usuario) {
+        this.usuarioRepositoryJpa.save(UsuarioInfraMapper.toEntity(usuario));
+    }
+
 }

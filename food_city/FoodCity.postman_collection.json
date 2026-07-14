@@ -1,0 +1,256 @@
+{
+  "info": {
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "name": "FoodCity API",
+    "description": "Collection para testes dos endpoints do FoodCity - Sistema de Gestão de Restaurantes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Tipos de Usuário",
+      "item": [
+        {
+          "name": "Cadastrar Tipo de Usuário",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idDono\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"id\": \"550e8400-e29b-41d4-a716-446655440001\",\n  \"role\": \"PROPRIETARIO\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/buscar-usuario",
+              "host": ["{{base_url}}"],
+              "path": ["buscar-usuario"]
+            }
+          }
+        },
+        {
+          "name": "Listar Tipos de Usuário",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/buscar-usuario",
+              "host": ["{{base_url}}"],
+              "path": ["buscar-usuario"]
+            }
+          }
+        },
+        {
+          "name": "Buscar Tipo de Usuário por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/buscar-usuario/1",
+              "host": ["{{base_url}}"],
+              "path": ["buscar-usuario", "1"]
+            }
+          }
+        },
+        {
+          "name": "Atualizar Tipo de Usuário",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idDono\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"id\": \"550e8400-e29b-41d4-a716-446655440001\",\n  \"role\": \"ADMINISTRADOR\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/buscar-usuario/1",
+              "host": ["{{base_url}}"],
+              "path": ["buscar-usuario", "1"]
+            }
+          }
+        },
+        {
+          "name": "Remover Tipo de Usuário",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/buscar-usuario/1",
+              "host": ["{{base_url}}"],
+              "path": ["buscar-usuario", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Restaurantes",
+      "item": [
+        {
+          "name": "Cadastrar Restaurante",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Pizzaria Italia\",\n  \"tipoCozinha\": \"Italiana\",\n  \"horarioAbertura\": \"11:00\",\n  \"horarioFechamento\": \"23:00\",\n  \"donoId\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"endereco\": {\n    \"logradouro\": \"Rua das Flores\",\n    \"numero\": 123,\n    \"bairro\": \"Centro\",\n    \"municipio\": \"São Paulo\",\n    \"estado\": \"SP\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/restaurantes/cadastrar",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "restaurantes", "cadastrar"]
+            }
+          }
+        },
+        {
+          "name": "Listar Restaurantes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/v1/restaurantes",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "restaurantes"]
+            }
+          }
+        },
+        {
+          "name": "Buscar Restaurante por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/v1/restaurantes/{{restaurante_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "restaurantes", "{{restaurante_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Atualizar Restaurante",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Pizzaria Italia Premium\",\n  \"tipoCozinha\": \"Italiana\",\n  \"horarioAbertura\": \"10:00\",\n  \"horarioFechamento\": \"00:00\",\n  \"donoId\": \"550e8400-e29b-41d4-a716-446655440000\",\n  \"endereco\": {\n    \"logradouro\": \"Rua das Flores\",\n    \"numero\": 123,\n    \"bairro\": \"Centro\",\n    \"municipio\": \"São Paulo\",\n    \"estado\": \"SP\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/restaurantes/{{restaurante_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "restaurantes", "{{restaurante_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Remover Restaurante",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/v1/restaurantes/{{restaurante_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "restaurantes", "{{restaurante_id}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cadastro de Usuários",
+      "item": [
+        {
+          "name": "Cadastrar Dono de Restaurante",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"João Silva\",\n  \"email\": \"joao@example.com\",\n  \"numeroDocumento\": \"12345678900\",\n  \"dataNascimento\": \"1990-01-15\",\n  \"usuario\": {\n    \"login\": \"joao_silva\",\n    \"senha\": \"SenhaSegura@123\"\n  },\n  \"enderecoDTO\": {\n    \"logradouro\": \"Rua A\",\n    \"numero\": 100,\n    \"bairro\": \"Bairro A\",\n    \"municipio\": \"São Paulo\",\n    \"estado\": \"SP\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/cadastrar/dono",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "cadastrar", "dono"]
+            }
+          }
+        },
+        {
+          "name": "Cadastrar Cliente",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Maria Santos\",\n  \"email\": \"maria@example.com\",\n  \"numeroDocumento\": \"98765432100\",\n  \"dataNascimento\": \"1995-05-20\",\n  \"usuario\": {\n    \"login\": \"maria_santos\",\n    \"senha\": \"OutraSenha@456\"\n  },\n  \"enderecoDTO\": {\n    \"logradouro\": \"Rua B\",\n    \"numero\": 200,\n    \"bairro\": \"Bairro B\",\n    \"municipio\": \"São Paulo\",\n    \"estado\": \"SP\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/cadastrar/cliente",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "cadastrar", "cliente"]
+            }
+          }
+        },
+        {
+          "name": "Cadastrar Funcionário",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Pedro Costa\",\n  \"email\": \"pedro@example.com\",\n  \"numeroDocumento\": \"55555555555\",\n  \"dataNascimento\": \"1988-03-10\",\n  \"usuario\": {\n    \"login\": \"pedro_costa\",\n    \"senha\": \"MaisSenha@789\"\n  },\n  \"enderecoDTO\": {\n    \"logradouro\": \"Rua C\",\n    \"numero\": 300,\n    \"bairro\": \"Bairro C\",\n    \"municipio\": \"São Paulo\",\n    \"estado\": \"SP\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/cadastrar/funcionario",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "cadastrar", "funcionario"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "restaurante_id",
+      "value": "550e8400-e29b-41d4-a716-446655440010",
+      "type": "string"
+    }
+  ]
+}

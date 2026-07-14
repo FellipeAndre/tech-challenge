@@ -38,7 +38,7 @@ public class CadastroEntity {
     @Embedded
     private EnderecoEmbeddable endereco;
 
-    @ManyToOne
-    @JoinColumn(name = "entity_id")
-    private UsuarioEntity entity;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "usuario_id", nullable = false, unique = true)
+    private UsuarioEntity UsuarioEntity;
 }

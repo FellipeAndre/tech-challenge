@@ -17,9 +17,9 @@ public class TipoUsuarioEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    private String role;
+
     @ManyToOne
     @JoinColumn(name = "id_usuario")
     private UsuarioEntity usuario;
-
-    private String role;
 }

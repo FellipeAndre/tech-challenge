@@ -12,21 +12,20 @@ public class Usuario {
 
     private String senha;
 
-    private TipoUsuario tipoUsuario;
 
     public Usuario(){
 
     }
 
-    public Usuario(UUID identificador, String login, TipoUsuario tipoUsuario) {
+    public Usuario(UUID identificador, String login) {
         this.identificador = identificador;
         this.login = login;
-        this.tipoUsuario = tipoUsuario;
+
     }
 
-    public Usuario(String login, String senha, TipoUsuario tipoUsuario) {
+    public Usuario(String login, String senha) {
         this.login = login;
-        this.tipoUsuario = tipoUsuario;
+        this.senha = Senha.criarHashSeguro(senha);
     }
 
     public void setSenha(String senha) {
@@ -45,7 +44,4 @@ public class Usuario {
         return senha;
     }
 
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
-    }
 }

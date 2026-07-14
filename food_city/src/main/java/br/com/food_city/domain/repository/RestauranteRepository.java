@@ -4,13 +4,13 @@ import br.com.food_city.domain.entities.Restaurante;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface RestauranteRepository {
 
     Restaurante salvar(Restaurante restaurante);
-    Optional<Restaurante> buscarPorId(Long id);
+    Optional<Restaurante> buscarPorId(UUID id);
     List<Restaurante> listarTodos();
-    List<Restaurante> listarPorDono(Long donoId);
-    void remover(Long id);
-    boolean existeUsuario(Long usuarioId);
+    //List<Restaurante> listarPorDono(UUID donoId);
+    void remover(UUID id);
 }

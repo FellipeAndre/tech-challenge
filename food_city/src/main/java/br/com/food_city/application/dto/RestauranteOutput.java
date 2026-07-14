@@ -1,22 +1,25 @@
 package br.com.food_city.application.dto;
 
+import com.fasterxml.jackson.databind.ser.std.UUIDSerializer;
+
 import java.time.LocalTime;
+import java.util.UUID;
 
 public class RestauranteOutput {
 
-    private Long id;
+    private UUID id;
     private String nome;
-//  private EnderecoOutput endereco;
+    private EnderecoOutput endereco;
     private String tipoCozinha;
     private LocalTime horarioAbertura;
     private LocalTime horarioFechamento;
-    private Long donoId;
+    private UUID donoId;
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -52,11 +55,19 @@ public class RestauranteOutput {
         this.horarioFechamento = horarioFechamento;
     }
 
-    public Long getDonoId() {
+    public UUID getDonoId() {
         return donoId;
     }
 
-    public void setDonoId(Long donoId) {
+    public void setDonoId(UUID donoId) {
         this.donoId = donoId;
+    }
+
+    public EnderecoOutput getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(EnderecoOutput endereco) {
+        this.endereco = endereco;
     }
 }

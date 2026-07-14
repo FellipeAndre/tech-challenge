@@ -16,4 +16,20 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.badRequest().body(error);
     }
+
+    @ExceptionHandler(UsuarioNaoEncontradoException.class)
+    public ResponseEntity<ErrorResponse> handleUsuarioNaoEncontrado(UsuarioNaoEncontradoException ex){
+
+        var error = new ErrorResponse(ex.getMessage(), HttpStatus.NOT_FOUND.value());
+
+        return ResponseEntity.badRequest().body(error);
+    }
+
+    @ExceptionHandler(GlobalNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handlenotfound(GlobalNotFoundException ex){
+
+        var error = new ErrorResponse(ex.getMessage(), HttpStatus.NOT_FOUND.value());
+
+        return ResponseEntity.badRequest().body(error);
+    }
 }

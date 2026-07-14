@@ -2,16 +2,23 @@ package br.com.food_city.domain.repository;
 
 import br.com.food_city.domain.entities.Cadastro;
 import br.com.food_city.domain.entities.TipoUsuario;
-import br.com.food_city.infrastructure.entity.TipoUsuarioEntity;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface TipoUsuarioRepository {
 
-    TipoUsuarioEntity salvarTipoUsuario(TipoUsuario tipoUsuario);
-    Optional<TipoUsuario> buscarPorId(Long id);
+    TipoUsuario salvarTipoUsuario(Cadastro tipoUsuario);
+    Optional<TipoUsuario> buscarPorId(UUID id);
     List<TipoUsuario> listarTodos();
-    List<TipoUsuario> listarPorDono(Long donoId);
-    void remover(Long id);
+    void remover(UUID id);
+
+    // ponto-chave: associação do tipo com um usuário já existente
+    void associarUsuario(UUID usuarioId, UUID tipoUsuarioId);
+    boolean existeUsuario(UUID usuarioId);
+
+    TipoUsuario salvar(TipoUsuario tipoUsuario);
+
+    String qualTipoUsuario(UUID donoId);
 }
